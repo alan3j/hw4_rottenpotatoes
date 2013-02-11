@@ -39,5 +39,26 @@ describe MoviesController do
     end
 
   end
+
+  describe 'add and remove movies' do
+
+    it 'should add new movies to the database' do
+      post :create, :movie => {:title => 'One Movie', :rating => 'G', :release_date => 1.year.ago}
+      assert_equal Movie.all.count, 1
+      post :create, :movie => {:title => 'Two Movies', :rating => 'G', :release_date => 2.years.ago}
+      assert_equal Movie.all.count, 2
+    end
+
+    it 'should delete movies from the database' do
+      post :create, :movie => {:title => 'One Movie', :rating => 'G', :release_date => 1.year.ago}
+      post :create, :movie => {:title => 'Two Movies', :rating => 'G', :release_date => 2.years.ago}
+      assert_equal Movie.all.count, 2
+      Movie.all.each do |m|
+        delete :destroy, id: m.id
+      end
+      assert_equal Movie.all.count, 0
+    end
+
+  end
 end
 
