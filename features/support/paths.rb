@@ -39,6 +39,9 @@ module NavigationHelpers
     when /^the Similar Movies page for "(.+)"$/
       "/movies/find_movie"
 
+    #-- Additional coverage
+    when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
+
     else
       begin
         page_name =~ /^the (.*) page$/
