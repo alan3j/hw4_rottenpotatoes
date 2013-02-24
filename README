@@ -1,6 +1,37 @@
 #-- craigj 2013.02.24
 Chapter 7 coursework branch
 
+#-- Steps to get running
+Setup Cucumber and RSpec.
+
+    Make sure your Gemfile contains these changes from Section 4.4 of ELLS, as well as the line
+
+    gem 'rspec-rails'
+
+    within the group :test, :development block.
+    Run bundle install --without production to make sure the gems are properly installed.
+    If necessary, set up the Cucumber directories (under features/) and the RSpec directories (under spec/), allowing overwrite of any existing files, by running the commands
+
+    rails generate cucumber:install capybara
+
+    rails generate cucumber_rails_training_wheels:install
+
+    rails generate rspec:install
+
+    Double-check that everything was installed by running the tasks
+
+    rake spec
+
+(error) bundle exec rake db:migrate
+
+    and
+
+    rake cucumber
+
+    . Since presumably you have no features or specs yet, both tasks should execute correctly and report that there are zero tests to run. Depending on your version of RSpec, it may also display a message stating that it was not able to find any '_spec.rb' files.
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
