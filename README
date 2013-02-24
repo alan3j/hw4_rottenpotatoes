@@ -31,6 +31,9 @@ Setup Cucumber and RSpec.
     . Since presumably you have no features or specs yet, both tasks should execute correctly and report that there are zero tests to run. Depending on your version of RSpec, it may also display a message stating that it was not able to find any '_spec.rb' files.
 
 
+#-- Partials; Fig 7.1 and 7.2
+
+
 
 == Welcome to Rails
 
