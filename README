@@ -33,6 +33,11 @@ Setup Cucumber and RSpec.
 
 #-- Partials; Fig 7.1 and 7.2
 
+#-- Model validator; Fig 7.3; and git cache cleanup
+Found db/development.sqlite3 in git cache so
+  git rm --cache db/development.sqlite3
+
+
 
 
 == Welcome to Rails
