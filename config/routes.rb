@@ -9,6 +9,8 @@ Rottenpotatoes::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
+  match 'auth/:provider/callback', :to => 'sessions#create', :as => 'login'
+  match 'logout', :to => 'sessions#destroy'
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

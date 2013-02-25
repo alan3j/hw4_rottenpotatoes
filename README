@@ -40,6 +40,7 @@ Found db/development.sqlite3 in git cache so
 #-- Validation updates to Controller and View
 Finished section 7.1
 
+#-- 3rd party auth in progress... not working
 
 
 == Welcome to Rails
