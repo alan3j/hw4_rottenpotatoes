@@ -37,6 +37,8 @@ Setup Cucumber and RSpec.
 Found db/development.sqlite3 in git cache so
   git rm --cache db/development.sqlite3
 
+#-- Validation updates to Controller and View
+Finished section 7.1
 
 
 

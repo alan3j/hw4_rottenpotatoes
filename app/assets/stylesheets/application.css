@@ -62,3 +62,7 @@ form label {
   font-weight: bold;
   color: maroon;
 }
+div.field_with_errors label {
+  font-weight: bold;
+  background-color: #FF0000;
+}

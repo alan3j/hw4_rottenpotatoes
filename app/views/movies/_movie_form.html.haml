@@ -1,5 +1,13 @@
 - #-- in _movie_form.html.haml (the partial)
 
+- #-- Adding error flash
+- unless @movie.errors.empty?
+  #warning
+    Errors prevented the movie from being #{controller.action_name}d:
+    %ul
+      - @movie.errors.full_messages.each do |e|
+        %li= e
+
 = label :movie, :title, 'Title'
 = text_field :movie, 'title'
 
@@ -7,4 +15,4 @@
 = select :movie, :rating, Movie.all_ratings
 
 = label :movie, :release_date, 'Released On'
-= date_select :movie, :release_date, :start_year => 1901
+= date_select :movie, :release_date, :start_year => 1901, :end_year => Time.now.year+ 5
